@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Blueprint Cafe Custom Styles */
+/* Deprecated ramen helpers removed in favor of Blueprint palette */
+
+/* Blueprint helpers */
+.bg-blueprint-offwhite { background-color: #F7F7F5; }
+.text-blueprint-primary { color: #1E3A8A; }
+.text-blueprint-accent { color: #2563EB; }
+.border-blueprint-outline { border-color: #D6E4FF; }
+
+/* Base font + background */
+html, body, #root { height: 100%; }
+body { @apply bg-blueprint-offwhite font-blueprint text-gray-800; }
+
+/* Hide scrollbar for mobile nav */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Image loading optimization */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Preload critical images */
+.preload-image {
+  content: '';
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+}
